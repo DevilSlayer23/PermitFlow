@@ -1,0 +1,15 @@
+# BEGIN: Django Project .gitignore
+*.pyc
+__pycache__/
+db.sqlite3
+/media
+/staticfiles
+.env
+*.log
+*.pot
+*.py[cod]
+*.egg-info/
+*.egg
+credential.txt
+.DS_Store
+# END: Django Project .gitignore

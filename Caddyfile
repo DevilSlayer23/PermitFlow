@@ -1,0 +1,22 @@
+http://localhost {
+    # Automatically handle HTTPS and serve the site
+    tls internal
+
+    # Serve static files directly
+    # The path after 'root *' should match your Django STATIC_ROOT setting
+    handle_path /static/* {
+        root * /static/
+        file_server
+    }
+
+    # Serve media files directly (if applicable)
+    # The path after 'root *' should match your Django MEDIA_ROOT setting
+    handle_path /media/* {
+        root * /media/
+        file_server
+    }
+
+    # Proxy all other requests to the Django application server
+    # The address should match where your Gunicorn/UWSGI server is listening
+    reverse_proxy localhost:8000
+}

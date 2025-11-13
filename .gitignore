@@ -5,6 +5,8 @@ db.sqlite3
 /media
 /staticfiles
 .env
+.vscode/
+.env.*
 *.log
 *.pot
 *.py[cod]
